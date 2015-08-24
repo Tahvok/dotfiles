@@ -39,6 +39,9 @@ bindsym $mod+d exec j4-dmenu-desktop
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# take screenshot
+bind --release $mod+99 exec --no-startup-id ksnapshot
+
 # change focus
 bind $mod+44 focus left
 bind $mod+45 focus down
@@ -224,6 +227,8 @@ bindsym $mod+Pause mode "$mode_system"
 
 bind $mod+Mod1+33 exec --no-startup-id $i3exit lock, mode "default"
 
+bindsym $mod+x move workspace to output right
+
 # Turn off monitor after 10 minutes
 exec --no-startup-id xset dpms 600
 
@@ -235,8 +240,8 @@ exec fbxkb
 #for_window [class="Yakuake"] border 0pixel  
 
 exec --no-startup-id feh --bg-scale Pictures/wall2.png
+exec --no-startup-id kmix
 
 #exec --no-startup-id xrandr --output VGA-0 --auto --right-of DVI-I-1
 
-bindsym $mod+x move workspace to output right
 
